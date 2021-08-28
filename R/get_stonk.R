@@ -7,6 +7,9 @@
 #' @param loud Logical. Loud!
 #' @param ... additional arguments for`tidyquant::tq_get()`.
 #' @return tibble of asset data.
+#' @import tidyquant
+#' @importFrom lubridate year
+#' @import dplyr
 #' @export
 get_stonk = function(ticker, from = "2007-01-01", to = Sys.Date(), returns = TRUE, loud = TRUE, ...){
   stonk = tq_get(x = ticker, from = from, to = to, ...)

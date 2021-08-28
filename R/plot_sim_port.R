@@ -7,6 +7,9 @@
 #' @param prices Logical. Plot asset prices instead of cumulative returns?
 #' @param ... additional arguments to `get_stonk()` (which get passed on to `tidyquant::tq_get()`.
 #' @return a ggplot object.
+#' @import ggplot2
+#' @import dplyr
+#' @importFrom tidyquant tq_get
 #' @export
 #
 plot_sim_port = function(.data, which_portfolio, adjust_start = 0, adjust_end = 0, prices = FALSE, ...){

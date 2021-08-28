@@ -6,6 +6,9 @@
 #' @param n_iterations. Integer. Number of iterations to run the simulation.
 #' @param loud Logical. Loud!
 #' @return data frame of simulation results.
+#' @import dplyr
+#' @import progress
+#' @importFrom lubridate origin
 #' @export
 #
 simulate_returns = function(.data, n_days_in_market=365, cost = 0, n_iterations=1e4, loud = TRUE){
@@ -44,10 +47,10 @@ simulate_returns = function(.data, n_days_in_market=365, cost = 0, n_iterations=
     pb$tick()
   }
 
-  tb = tibble("id" = i,
+  tb = tibble("id" = 1:n_iterations,
               "ticker" = stonk,
-              "start_date" = as.Date(start_dates),
-              "end_date" = as.Date(end_dates),
+              "start_date" = as.Date(start_dates, origin = lubridate::origin),
+              "end_date" = as.Date(end_dates, origin = lubridate::origin),
               "expected_return" = returns - cost,
               "positive_return" = ifelse(expected_return > 0, 1, 0),
               "sample_range_min" = min_date,

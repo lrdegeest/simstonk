@@ -5,6 +5,8 @@
 #' @param cumulative Logical. Overlay the cumulative distribution?
 #' @param ... additional ggplot arguments.
 #' @return a ggplot object.
+#' @import dplyr
+#' @import ggplot2
 #' @export
 #
 plot_sim = function(.data, normalized = FALSE, cumulative = FALSE, ...){

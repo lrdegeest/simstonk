@@ -3,6 +3,7 @@
 #' @param .data a data frame.
 #' @param n Integer. Sample size.
 #' @return a sampled data frame.
+#' @import dplyr
 #' @export
 #
 slice_sequence = function(.data, n){
