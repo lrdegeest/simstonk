@@ -36,3 +36,5 @@ Plot them:
 ```
 plot_sim(appl_sim, cumulative = TRUE, normalized = TRUE)
 ```
+
+![](appl.png)
