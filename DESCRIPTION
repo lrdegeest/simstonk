@@ -1,0 +1,18 @@
+Package: simstonk
+Type: Package
+Title: Simulate Investment Portfolios
+Version: 0.1.0
+Author: Lawrence R. De Geest
+Maintainer: Lawrence R. De Geest <lrdegeest@gmail.com>
+Description: Run a Monte Carlo simulation for an investment. 
+    Simulations are based on ordered draws of historical data.
+    365 consecutive days holding an asset, two consecutive years, and so on.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.1.0)
+Imports: 
+  dplyr, 
+  ggplot2, 
+  tidyquant
+RoxygenNote: 7.1.1
