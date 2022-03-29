@@ -13,7 +13,6 @@ Built this package for teaching. Useful in the classroom.
 # Install
 
 ```r
-library(remotes)
 remotes::install_github("lrdegeest/simstonk")
 ```
 
